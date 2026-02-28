@@ -1,0 +1,6 @@
+/* Tailwind 4 theme configuration */
+@theme {
+  --font-sans: "AvenirNextLTW01", "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+  --font-serif: "BauerBodoni", "Bauer Bodoni", "Didot", "Playfair Display", "Georgia", serif;
+  --radius: 0.625rem;
+}

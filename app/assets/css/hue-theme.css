@@ -1,0 +1,586 @@
+/* ================================================================
+   HUE CREATIVE AGENCY — GLOBAL THEME
+   ================================================================
+   Primary typeface:   Avenir Next LT W01
+     200 (Ultra Light) — display / hero headlines
+     400 (Regular)     — body copy
+     500 (Medium)      — labels, buttons, prices, emphasis
+
+   Editorial typeface: Bauer Bodoni Pro
+     400 (Roman)       — pull quotes, callouts, editorial accents
+
+   White-on-white. Apple Store clean.
+   ================================================================ */
+
+:root {
+  --font: "AvenirNextLTW01", "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+  --font-editorial: "BauerBodoni", "Bauer Bodoni", "Didot", "Playfair Display", "Georgia", serif;
+
+  /* ─ Colors ─────────────────────────────────────── */
+  --white: #ffffff;
+  --snow: #fafafa;
+  --cloud: #f5f5f5;
+  --silk: #ebebeb;
+  --silver: #c7c7c7;
+  --grey: #86868b;
+  --dark-grey: #6e6e73;
+  --near-black: #1d1d1f;
+
+  /* ─ Semantic ───────────────────────────────────── */
+  --color-bg: var(--white);
+  --color-bg-alt: var(--snow);
+  --color-bg-dark: var(--near-black);
+  --color-text: var(--near-black);
+  --color-text-secondary: var(--dark-grey);
+  --color-text-muted: var(--grey);
+  --color-text-inverse: var(--white);
+  --color-border: var(--cloud);
+  --color-border-light: var(--silk);
+
+  /* ─ Motion ─────────────────────────────────────── */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 300ms;
+  --duration-slow: 500ms;
+
+  /* ─ Shadows ────────────────────────────────────── */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+  /* ─ Radius ─────────────────────────────────────── */
+  --radius: 0.625rem;
+}
+
+
+/* ══════════════════════════════════════════════════
+   BASE
+   ══════════════════════════════════════════════════ */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+::selection {
+  background: var(--near-black);
+  color: var(--white);
+}
+
+
+/* ══════════════════════════════════════════════════
+   DISPLAY — Avenir Next, weight 200 (Ultra Light)
+   Hero headlines, section titles, large statements
+   ══════════════════════════════════════════════════ */
+
+.hue-display-xl {
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: clamp(3rem, 8vw, 5.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+}
+
+.hue-display-lg {
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.hue-display-md {
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: 1.625rem;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.hue-display-sm {
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: 1.1875rem;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+
+/* ══════════════════════════════════════════════════
+   EDITORIAL — Bauer Bodoni Pro (Roman / Italic)
+   Pull quotes, callouts, accent headlines,
+   hero sublines, testimonials, editorial moments
+   ══════════════════════════════════════════════════ */
+
+/* Base modifier — add to any element for Bodoni */
+.hue-editorial {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Sized editorial classes */
+.hue-editorial-xl {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.hue-editorial-lg {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--color-text-secondary);
+}
+
+.hue-editorial-md {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+.hue-editorial-sm {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Roman (non-italic) variant — for editorial callout labels */
+.hue-editorial-roman {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Pull quote — centered, large, padded */
+.hue-pullquote {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.25;
+  color: var(--color-text);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Callout — editorial accent for inline emphasis */
+.hue-callout {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+/* Caption — small editorial note, image captions */
+.hue-caption {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+
+/* ══════════════════════════════════════════════════
+   BODY — Avenir Next, weight 400 (Regular)
+   ══════════════════════════════════════════════════ */
+
+.hue-body-lg {
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.hue-body {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.hue-body-sm {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+
+/* ══════════════════════════════════════════════════
+   LABELS & UI — Avenir Next, weight 500 (Medium)
+   ══════════════════════════════════════════════════ */
+
+.hue-label {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.hue-label-sm {
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.hue-overline {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+
+/* ══════════════════════════════════════════════════
+   PRICE
+   ══════════════════════════════════════════════════ */
+
+.hue-price {
+  font-weight: 500;
+  font-size: 1.625rem;
+  color: var(--color-text);
+}
+
+.hue-price-label {
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+
+/* ══════════════════════════════════════════════════
+   LINKS & BUTTONS
+   ══════════════════════════════════════════════════ */
+
+.hue-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: gap var(--duration) var(--ease),
+              opacity var(--duration) var(--ease);
+}
+
+.hue-link:hover {
+  gap: 0.65rem;
+  opacity: 0.6;
+}
+
+.hue-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 0.7rem 1.75rem;
+  background: var(--near-black);
+  color: var(--white);
+  border: none;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease),
+              gap var(--duration) var(--ease);
+}
+
+.hue-btn:hover {
+  background: #333;
+  gap: 0.65rem;
+}
+
+.hue-btn-ghost {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 0.7rem 1.75rem;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 980px;
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease),
+              border-color var(--duration) var(--ease);
+}
+
+.hue-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hue-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 0.7rem 1.75rem;
+  color: var(--color-text);
+  border: 1px solid var(--color-border-light);
+  border-radius: 980px;
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease),
+              border-color var(--duration) var(--ease);
+}
+
+.hue-btn-outline:hover {
+  background: var(--snow);
+  border-color: var(--silver);
+}
+
+
+/* ══════════════════════════════════════════════════
+   CONTAINERS
+   ══════════════════════════════════════════════════ */
+
+.hue-container    { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.hue-container-sm { max-width: 680px;  margin: 0 auto; padding: 0 1.5rem; }
+.hue-container-md { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+
+/* ══════════════════════════════════════════════════
+   SECTIONS
+   ══════════════════════════════════════════════════ */
+
+.hue-section     { background: var(--color-bg); }
+.hue-section-alt { background: var(--color-bg-alt); }
+
+.hue-section-dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+}
+
+.hue-section-dark .hue-display-xl,
+.hue-section-dark .hue-display-lg,
+.hue-section-dark .hue-display-md,
+.hue-section-dark .hue-editorial-xl,
+.hue-section-dark .hue-editorial-lg,
+.hue-section-dark .hue-pullquote {
+  color: var(--white);
+}
+
+.hue-section-dark .hue-editorial-md,
+.hue-section-dark .hue-editorial-sm,
+.hue-section-dark .hue-caption {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hue-section-dark .hue-label,
+.hue-section-dark .hue-overline {
+  color: var(--grey);
+}
+
+
+/* ══════════════════════════════════════════════════
+   CARDS
+   ══════════════════════════════════════════════════ */
+
+.hue-card {
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: transform var(--duration) var(--ease),
+              box-shadow var(--duration-slow) var(--ease);
+}
+
+.hue-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hue-card-featured {
+  border-color: var(--near-black);
+  position: relative;
+}
+
+.hue-card-featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  background: var(--near-black);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: 12px 12px 0 0;
+}
+
+
+/* ══════════════════════════════════════════════════
+   LIST
+   ══════════════════════════════════════════════════ */
+
+.hue-list {
+  list-style: none;
+  padding: 0;
+}
+
+.hue-list li {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  padding: 0.2rem 0 0.2rem 1rem;
+  position: relative;
+}
+
+.hue-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 4px;
+  height: 1px;
+  background: var(--silver);
+}
+
+
+/* ══════════════════════════════════════════════════
+   GRID
+   ══════════════════════════════════════════════════ */
+
+.hue-grid-bordered {
+  display: grid;
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hue-grid-bordered > * {
+  background: var(--white);
+  transition: background var(--duration) var(--ease);
+}
+
+.hue-grid-bordered > *:hover {
+  background: var(--snow);
+}
+
+
+/* ══════════════════════════════════════════════════
+   DIVIDER
+   ══════════════════════════════════════════════════ */
+
+.hue-divider-diamond {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  color: var(--silver);
+}
+
+.hue-divider-diamond::before {
+  content: "◆";
+}
+
+
+/* ══════════════════════════════════════════════════
+   SHAPE ICONS
+   ══════════════════════════════════════════════════ */
+
+.hue-shape {
+  font-size: 0.45rem;
+  color: var(--silver);
+}
+
+
+/* ══════════════════════════════════════════════════
+   SCROLL REVEAL — IntersectionObserver driven
+   ══════════════════════════════════════════════════ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.6s; }
+
+
+/* ══════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ══════════════════════════════════════════════════ */
+
+@keyframes hue-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hue-fade-up         { animation: hue-fade-up 0.8s ease-out both; }
+.hue-fade-up-delay-1 { animation-delay: 0.15s; }
+.hue-fade-up-delay-2 { animation-delay: 0.3s; }
+.hue-fade-up-delay-3 { animation-delay: 0.45s; }
+
+
+/* ══════════════════════════════════════════════════
+   PAGE TRANSITIONS
+   ══════════════════════════════════════════════════ */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 400ms var(--ease), transform 400ms var(--ease);
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}

@@ -1,0 +1,43 @@
+/* ================================================================
+   FONT DECLARATIONS
+   ================================================================ */
+
+/* ── Avenir Next LT W01 ─────────────────────────── */
+
+@font-face {
+  font-family: 'AvenirNextLTW01';
+  src: url('./fonts/AvenirNextLTW01-UltraLight.woff2') format('woff2'),
+       url('./fonts/AvenirNextLTW01-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTW01';
+  src: url('./fonts/AvenirNextLTW01-Regular.woff2') format('woff2'),
+       url('./fonts/AvenirNextLTW01-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTW01';
+  src: url('./fonts/AvenirNextLTW01-Medium.woff2') format('woff2'),
+       url('./fonts/AvenirNextLTW01-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Bauer Bodoni ────────────────────────────────── */
+
+@font-face {
+  font-family: 'BauerBodoni';
+  src: url('./fonts/BauerBodoniPro1W01-Roman.woff2') format('woff2'),
+       url('./fonts/BauerBodoniPro1W01-Roman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
